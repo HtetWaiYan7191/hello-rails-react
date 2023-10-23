@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import {useDispatch, useSelector} from 'react-redux';
-import { fetchMessage } from './redux/messageSlice';
+import { useSelector } from 'react-redux'
 
 const Greeting = () => {
-    const messages = useSelector((state) => state.messages)
-    console.log(messages)
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchMessage());
-    })
+    const messages = useSelector((state) => state.messages.value)
 
   return (
     <div>
-        <h1>{messages}</h1>
+        <h1>{messages.greeting}</h1>
     </div>
   )
 }
