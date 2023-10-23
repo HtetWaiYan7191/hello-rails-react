@@ -4,6 +4,7 @@ import { fetchMessage } from './redux/messageSlice';
 
 const Greeting = () => {
     const messages = useSelector((state) => state.messages)
+    console.log(messages)
     const dispatch = useDispatch();
 
     useEffect(() => {

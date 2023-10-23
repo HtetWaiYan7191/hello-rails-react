@@ -1,10 +1,13 @@
-import {BrowserRouter, Route,} from 'react-router-dom';
-import Greeting from './Greeting';  
-
-const App = () => (
+import React from 'react';
+import {
+    BrowserRouter, Route,
+  } from 'react-router-dom';
+  import Greeting from './Greeting';
+  
+  const App = () => (
     <BrowserRouter>
-        <Route  path='/' element={<Greeting/>} />
+      <Route path="/" element={<Greeting />} />
     </BrowserRouter>
-)
-
-export default App;
+  );
+  
+  export default App;
